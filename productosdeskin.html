@@ -1,0 +1,298 @@
+<html>
+    <html lang="es">
+     <head>
+        <title>prodectos de SKIN </title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda todo Clean</title>
+    <style>
+        :root {
+            --primary: #6599e7;
+            --secondary: #64748b;
+            --dark: #1e293b;
+            --light: #e914a2;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--light); color: var(--dark); margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; display: grid; grid-template-columns: 1fr 350px; gap: 20px; }
+        
+        h1, h2 { border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
+
+        /* Productos */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
+        .product-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+        
+        /* Botones */
+        button { background: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        button:hover { opacity: 0.8; }
+        button.secondary { background: var(--secondary); }
+
+        /* Carrito e Historial */
+        .panel { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .item-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        .history-item { margin-bottom: 15px; padding: 10px; background: #f1f5f9; border-left: 4px solid var(--primary); font-size: 0.85em; }
+        
+        .total-box { font-weight: bold; font-size: 1.2em; margin: 15px 0; text-align: right; }
+        
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+    </style>
+     </head>
+     <link rel="icon" type="imagen/x-icon" href="img/favicon.jpg">
+     <body>
+<body style="background-image: url(img/fondo.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;;">
+      <center> 
+<img src="img/logotipo.jpg" width="140" border="1"><br><br>
+<h1 style="color: purple">TIENDA EN LINEA LUMIA SKIN</h1> 
+<h2 style="color:rgb(197, 11, 188)">La mejor tienda para el cuidado de tu piel</h2>
+          <table border="2">
+              <center>
+            <tr>
+                <th bgcolor="Pink"><img src="img/protector.jpg" width="150">
+                    <br>protector solar 
+                  <p><strong> precio: 50.00</strong></p>
+                      <button onclick="agregarAlCarrito('protector solar', 50)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/serum.jpg" width="110">
+                    <br>serum hidratante
+                   <p><strong> precio: 100.00</strong></p>
+                      <button onclick="agregarAlCarrito('serum hidratante', 100)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/crema.jpg" width="150">
+                    <br>crema hidratadora
+                    <p><strong> precio: 95.00</strong></p>
+                      <button onclick="agregarAlCarrito('crema hidratadora', 95)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/combo.jpg" width="130">
+                    <br>combo de mascarillas
+                    <p><strong> precio: 60.00</strong></p>
+                      <button onclick="agregarAlCarrito('combo de mascarillas', 60)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/parches.jpg" width="150">
+                    <br>parches de aloe vera
+                    <p><strong>precio: 50.00</strong></p>
+                      <button onclick="agregarAlCarrito('parches de aloe vera', 50)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/mascarilla.jpg" width="130">
+                    <br>mascarilla de carbon
+                    <p><strong>precio: 45.00</strong></p>
+                      <button onclick="agregarAlCarrito('mascarilla de carbon', 45)">Agregar</button>
+                </th>
+            </tr>
+            <tr>
+                    <th bgcolor="Pink"><img src="img/rodillo.jpg" width="110">
+                    <br>rodillo facial
+                   <p><strong>precio: 60.00</strong></p>
+                      <button onclick="agregarAlCarrito('rodillo fasial', 60)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/facial.jpg" width="130">
+                    <br>combo de cuidado facial
+                   <p><strong>precio: 450.00</strong></p>
+                      <button onclick="agregarAlCarrito('combo de cuidado fasial', 450)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/balsamos.jpg" width="140">
+                    <br>balsamos labiales
+                    <p><strong>precio: 45.00 c/u</strong></p>
+                      <button onclick="agregarAlCarrito('protector solar', 45)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/serum facial.jpg" width="120">
+                    <br>serum facial
+                    <p><strong>precio: 185.00</strong></p>
+                      <button onclick="agregarAlCarrito('serum fasial', 185)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/agua de rosas.jpg" width="110">
+                    <br>agua de rosas
+                   <p><strong>precio: 100.00</strong></p>
+                      <button onclick="agregarAlCarrito('agua de sosas', 100)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/protector solar tropic.jpg" width="140">
+                    <br>protector solar tropic
+                    <p><strong>precio: 135.00</strong></p>
+                      <button onclick="agregarAlCarrito('protector solar tropic ', 135)">Agregar</button>
+                </th>
+            </tr>
+            <tr>
+                <th bgcolor="Pink"><img src="img/parches para granitos.jpg" width="110">
+                    <br>parches para granitos
+                     <p><strong>precio: 50.00</strong></p>
+                      <button onclick="agregarAlCarrito('parches para granitos', 50)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/jabon.jpg" width="110">
+                    <br>jabon liquido cereve piel seca
+                   <p><strong>precio: 100.00</strong></p>
+                      <button onclick="agregarAlCarrito('jabon liquido cereve piel seca', 100)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/jabon liquido.jpg" width="110">
+                    <br>jabon liquido cerave piel mixta 
+                     <p><strong>precio: 100.00</strong></p>
+                      <button onclick="agregarAlCarrito('jabon liquido cerave piel mixta', 100)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/vaselina.jpg" width="110">
+                    <br>vaselina original
+                   <p><strong>precio: 25.00</strong></p>
+                      <button onclick="agregarAlCarrito('vaselina original', 25)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/espuma.jpg" width="110">
+                    <br>espuma faviola BIOAQUA
+                    <p><strong>precio: 35.00</strong></p>
+                      <button onclick="agregarAlCarrito('espuma faviola BIOAQUA', 35)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/tonico facial.jpg" width="110">
+                    <br>tonico facial
+                     <p><strong>precio: 85.00</strong></p>
+                      <button onclick="agregarAlCarrito('tonico fasial', 85)">Agregar</button>
+                </th>
+            </tr> 
+            <tr>
+                <th bgcolor="Pink"><img src="img/hello kitty.jpg" width="110">
+                    <br>parches de hello kitty
+                    <p><strong>precio: 25.00</strong></p>
+                      <button onclick="agregarAlCarrito('parches de hello kitty', 25)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/fresa.jpg" width="110">
+                    <br>balsamos de fresa
+                     <p><strong>precio: 15.00</strong></p>
+                      <button onclick="agregarAlCarrito('balsasmo de fresa', 15)">Agregar</button>
+                </th> 
+                <th bgcolor="Pink"><img src="img/toallas.jpg" width="110">
+                    <br>toallas desmaquillantes
+                    <p><strong>precio: 25.00</strong></p>
+                    <button onclick="agregarAlCarrito('toallas', 25)">Agregar</button>
+                </th>
+                <th bgcolor="Pink"><img src="img/combo de sckin.jpg" width="110">
+                    <br>combo de sckin care Dior
+                    <p><strong>precio: 1500.00</strong></p>
+                    <button onclick="agregarAlCarrito('combo de sckin care Dior', 1500)">Agregar</butto>
+                </th>
+                <th bgcolor="Pink"><img src="img/crema fasial idratante.jpg" width="110">
+                    <br>crema fasial hidratante
+                    <p><strong>precio: 85.00</strong></p>
+                    <button onclick="agregarAlCarrito('crema fasial hidratante', 85)">Agregar</button>
+                </th>
+                  <th bgcolor="Pink"><img src="img/labial.jpg" width="110">
+                    <br>labial hidratante sheglam
+                    <p><strong>precio: 65.00</strong></p>
+                    <button onclick="agregarAlCarrito('labial hidratante sheglam', 65)">Agregar</button>
+                </th>
+            </tr>
+            </center>
+          </table>
+          <br><br>
+          © 2026 LUMIA Skin Care. Todos los derechos reservados. Desarrollado por Juan y Dayanara
+        </center>
+         <h2>Historial de Compras</h2>
+            <div id="historial" class="panel">
+                <p>No hay compras registradas.</p>
+            </div>
+            <button class="secondary" onclick="limpiarHistorial()" style="margin-top: 10px;">Borrar Historial</button>
+        </section>
+
+        <aside>
+            <div class="panel">
+                <h2>Tu Carrito</h2>
+                <div id="carrito-items">
+                    <p>El carrito está vacío.</p>
+                </div>
+                <div class="total-box">Total: Q<span id="total-precio">0</span></div>
+                <button style="width: 100%; padding: 15px;" onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </aside>
+    </div>
+        <script>
+            let carrito = [];
+        let historial = JSON.parse(localStorage.getItem('historial_compras')) || [];
+
+        // 1. Agregar productos
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            renderizarCarrito();
+        }
+
+        // 2. Dibujar el carrito en pantalla
+        function renderizarCarrito() {
+            const contenedor = document.getElementById('carrito-items');
+            const totalTxt = document.getElementById('total-precio');
+            
+            if (carrito.length === 0) {
+                contenedor.innerHTML = '<p>El carrito está vacío.</p>';
+                totalTxt.innerText = '0';
+                return;
+            }
+
+            contenedor.innerHTML = '';
+            let total = 0;
+
+            carrito.forEach((item, index) => {
+                total += item.precio;
+                contenedor.innerHTML += `
+                    <div class="item-row">
+                        <span>${item.nombre}</span>
+                        <span>Q${item.precio} <button onclick="eliminarDelCarrito(${index})" style="background:red; padding: 2px 6px;">x</button></span>
+                    </div>
+                `;
+            });
+
+            totalTxt.innerText = total;
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            renderizarCarrito();
+        }
+
+        // 3. Finalizar compra y guardar en historial
+        function finalizarCompra() {
+            if (carrito.length === 0) return alert("El carrito está vacío");
+
+            const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+            const nuevaCompra = {
+                fecha: new Date().toLocaleString(),
+                productos: [...carrito],
+                total: total
+            };
+
+            historial.push(nuevaCompra);
+            localStorage.setItem('historial_compras', JSON.stringify(historial));
+            
+            carrito = []; // Vaciar carrito
+            renderizarCarrito();
+            renderizarHistorial();
+            alert("¡Compra realizada con éxito!");
+        }
+
+        // 4. Dibujar el historial
+        function renderizarHistorial() {
+            const contenedor = document.getElementById('historial');
+            if (historial.length === 0) {
+                contenedor.innerHTML = '<p>No hay compras registradas.</p>';
+                return;
+            }
+
+            contenedor.innerHTML = '';
+            historial.reverse().forEach(compra => {
+                const listaNombres = compra.productos.map(p => p.nombre).join(', ');
+                contenedor.innerHTML += `
+                    <div class="history-item">
+                        <strong>Fecha:</strong> ${compra.fecha}<br>
+                        <strong>Productos:</strong> ${listaNombres}<br>
+                        <strong>Total:</strong> Q${compra.total}
+                    </div>
+                `;
+            });
+        }
+
+        function limpiarHistorial() {
+            localStorage.removeItem('historial_compras');
+            historial = [];
+            renderizarHistorial();
+        }
+
+        // Cargar historial al iniciar
+        renderizarHistorial();
+    </script>
+     </body>
+</html>
